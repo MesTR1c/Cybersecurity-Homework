@@ -152,7 +152,7 @@ def sm3_kdf(z, klen): # z为16进制表示的比特串（str），klen为密钥�
 def sm3_gmssl(data: bytes) -> bytes:
     return bytes.fromhex(sm3_hash([i for i in data]))
 
-#（如果下图没有显示出来的话，可以到pics文件夹查看）(如果您想测试代码的正确性的话，直接运行可能较慢，您可以将[0:6]替换成[0:1]或[0:2]，这样可以较为快速的得出碰撞8bit和16bit的结果)
+#(如果您想测试代码的正确性的话，直接运行可能较慢，您可以将[0:6]替换成[0:1]或[0:2]，这样可以较为快速的得出碰撞8bit和16bit的结果)
 def birthday_attack():
   start=time.time()
   flag=False
